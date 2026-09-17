@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="SECOND_FRAGMENT"
+    tools:context=".SecondFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayout_IpAddress"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ip_address_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconContentDescription="@string/ip_address_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditText_IpAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ip_address_hint"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayout_IpPort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ip_port_label"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayout_IpAddress"
+            app:startIconContentDescription="@string/ip_port_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditText_IpPort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ip_port_hint"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayout_DeviceModel"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/device_model_hint"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayout_IpPort">
+
+            <AutoCompleteTextView
+                android:id="@+id/AutoCompleteTextView_DeviceModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                tools:ignore="LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayout_IpAddressAudioStreamer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ip_address_audio_streamer_label"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayout_DeviceModel"
+            app:startIconContentDescription="@string/ip_port_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditText_IpAddressAudioStreamer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ip_address_audio_streamer_hint"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayout_ZoneNumber"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/zone_number_hint"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayout_IpAddressAudioStreamer">
+
+            <AutoCompleteTextView
+                android:id="@+id/AutoCompleteTextView_ZoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                tools:ignore="LabelFor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintStart_toStartOf="@+id/TextInputLayout_IpAddress"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayout_ZoneNumber"
+            tools:ignore="RtlSymmetry">
+
+            <Button
+                android:id="@+id/button_saveSettings"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/save"
+                app:icon="@android:drawable/ic_menu_save" />
+
+            <Button
+                android:id="@+id/button_cancelSettings"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                app:icon="@android:drawable/ic_menu_close_clear_cancel" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

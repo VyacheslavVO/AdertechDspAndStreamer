@@ -1,0 +1,146 @@
+[
+  { "model": "APROC-44",
+    "In": {
+      "Analog": 4,
+      "USB": 1,
+      "Dante": 0
+    },
+    "Out": {
+      "Analog": 4,
+      "USB": 1,
+      "Dante": 0
+    }
+  },
+  { "model": "APROC-44D",
+    "In": {
+      "Analog": 4,
+      "USB": 1,
+      "Dante": 4
+    },
+    "Out": {
+      "Analog": 4,
+      "USB": 1,
+      "Dante": 4
+    }
+  },
+  { "model": "APROC-88",
+    "In": {
+      "Analog": 8,
+      "USB": 1,
+      "Dante": 0
+    },
+    "Out": {
+      "Analog": 8,
+      "USB": 1,
+      "Dante": 0
+    }
+  },
+  { "model": "APROC-88D",
+    "In": {
+      "Analog": 8,
+      "USB": 1,
+      "Dante": 8
+    },
+    "Out": {
+      "Analog": 8,
+      "USB": 1,
+      "Dante": 8
+    }
+  },
+  { "model": "APROC-1212",
+    "In": {
+      "Analog": 12,
+      "USB": 1,
+      "Dante": 0
+    },
+    "Out": {
+      "Analog": 12,
+      "USB": 1,
+      "Dante": 0
+    }
+  },
+  { "model": "APROC-1212D",
+    "In": {
+      "Analog": 12,
+      "USB": 1,
+      "Dante": 8
+    },
+    "Out": {
+      "Analog": 12,
+      "USB": 1,
+      "Dante": 8
+    }
+  },
+  { "model": "APROC-128",
+    "In": {
+      "Analog": 12,
+      "USB": 1,
+      "Dante": 0
+    },
+    "Out": {
+      "Analog": 8,
+      "USB": 1,
+      "Dante": 0
+    }
+  },
+  { "model": "APROC-128D",
+    "In": {
+      "Analog": 12,
+      "USB": 1,
+      "Dante": 8
+    },
+    "Out": {
+      "Analog": 8,
+      "USB": 1,
+      "Dante": 8
+    }
+  },
+  { "model": "APROC-1616",
+    "In": {
+      "Analog": 16,
+      "USB": 1,
+      "Dante": 0
+    },
+    "Out": {
+      "Analog": 16,
+      "USB": 1,
+      "Dante": 0
+    }
+  },
+  { "model": "APROC-1616D",
+    "In": {
+      "Analog": 16,
+      "USB": 1,
+      "Dante": 16
+    },
+    "Out": {
+      "Analog": 16,
+      "USB": 1,
+      "Dante": 16
+    }
+  },
+  { "model": "APROC-168D",
+    "In": {
+      "Analog": 16,
+      "USB": 1,
+      "Dante": 16
+    },
+    "Out": {
+      "Analog": 8,
+      "USB": 1,
+      "Dante": 16
+    }
+  },
+  { "model": "APROC-6464D",
+    "In": {
+      "Analog": 16,
+      "USB": 1,
+      "Dante": 64
+    },
+    "Out": {
+      "Analog": 16,
+      "USB": 1,
+      "Dante": 64
+    }
+  }
+]

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">AdertechAudioApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_editor"> Editor</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">\u0020\u0020Device Model</string>
+    <string name="second_fragment_label">\u0020Settings</string>
+    <string name="third_fragment_label">\u0020Editor</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="ip_address_hint">DSP IP Address (e.g., 192.168.10.22)</string>
+    <string name="ip_address_audio_streamer_hint">Audio Streamer IP Address (e.g., 192.168.10.23)</string>
+    <string name="ip_address_label">DSP IP Address</string>
+    <string name="ip_address_audio_streamer_label">Audio Streamer IP Address</string>
+    <string name="ip_port_hint">DSP IP Port (e.g., 50000)</string>
+    <string name="ip_port_label">DSP IP Port</string>
+    <string name="device_model_hint">DSP Device Model</string>
+    <string name="zone_number_hint">App Zone Number</string>
+    <string name="source_name">Source Name</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="_return">Return</string>
+    <string name="mute">Mute</string>
+    <string name="unmute">Unmute</string>
+    <string name="source_not_selected">Source not selected</string>
+    <string name="current_volume">0.0 dB</string>
+    <string name="adertech">\u0020\u0020Adertech</string>
+    <string name="friendly_name_hint">add Friendly Name</string>
+    <string name="friendly_name_label">Friendly Name</string>
+    <string name="visibility_label">Visibility</string>
+    <string name="album_cover">Album Cover</string>
+    <string name="volume_up">Volume Up</string>
+    <string name="volume_down">Volume Down</string>
+    <string name="time_track">00:00</string>
+    <string name="name_track">Here is the track name</string>
+    <string name="add_favorite">Add Favorite</string>
+    <string name="track_playPause">Play or pause a track</string>
+    <string name="track_shuffle">Track shuffle</string>
+    <string name="track_repeat">Track repeat</string>
+    <string name="track_prev">Prev track</string>
+    <string name="track_next">Next track</string>
+    <string name="track_muteUnmute">Mute or Unmute track</string>
+    <string name="item_add_favorite">Add to Favorite</string>
+    <string name="item_add_playList">Add to Playlist</string>
+    <string name="item_list_audio_folder">Folder</string>
+    <string name="item_list_audio_numberTracks">%1$s tracks</string>
+    <string name="item_list_audio_folderName">Folder name</string>
+    <string name="item_list_audio_albumArt">Album Art</string>
+    <string name="item_list_audio_trackName">Track name</string>
+    <string name="select_source_music">Select source music</string>
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/imageView_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/item_list_audio_folder"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:srcCompat="@drawable/outline_folder_24" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_item_desc_folder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp" >
+
+        <TextView
+            android:id="@+id/TextView_folderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/item_list_audio_folderName"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TextView_tracksCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/item_list_audio_numberTracks"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</LinearLayout>

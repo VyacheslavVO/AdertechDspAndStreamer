@@ -1,0 +1,86 @@
+package com.vo.adertechaudioapp_v1;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.button.MaterialButton;
+import com.vo.adertechaudioapp_v1.config.AppConfigItem;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EditorAdapter extends RecyclerView.Adapter<EditorAdapter.EditorViewHolder> {
+
+    private static final String TAG = EditorAdapter.class.getSimpleName();
+
+    public interface IEditorAdapterListeners {
+        void onClickListener(View view, AppConfigItem configItem, int selectedPosition);
+    }
+    IEditorAdapterListeners listeners;
+
+    Context context;
+    private final List<AppConfigItem> appConfigItemList;
+    private int selectedPosition = -1;                      // Позиция выбранной радиокнопки
+    public EditorAdapter(Context context, List<AppConfigItem> appConfigItemList, IEditorAdapterListeners listeners) {
+        this.context = context;
+        this.appConfigItemList = new ArrayList<>(appConfigItemList);
+        this.listeners = listeners;
+    }
+
+    public int getSelectedPosition() {
+        return this.selectedPosition;
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void setSelectedPosition(int position) {
+        this.selectedPosition = position;
+        notifyDataSetChanged();
+    }
+
+    /// Метод указания какой конкретно дизайн мы будем использовать для отображения каждого элемента
+    @NonNull
+    @Override
+    public EditorViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View item = LayoutInflater.from(context).inflate(R.layout.fragment_third_item, parent, false);
+        return new EditorViewHolder(item);
+    }
+
+    /// Метод что конкретно мы будем подставлять в сам дизайн
+    @SuppressLint("NotifyDataSetChanged")
+    @Override
+    public void onBindViewHolder(@NonNull EditorViewHolder holder, int position) {
+        holder.toggleButton.setText(appConfigItemList.get(position).getName());
+        holder.toggleButton.setChecked(position == selectedPosition);
+
+        holder.toggleButton.setOnClickListener(v -> {
+            if (holder.toggleButton.isChecked()) selectedPosition = holder.getAbsoluteAdapterPosition();
+            else selectedPosition = -1;
+            notifyDataSetChanged();                                             // Обновляем список, чтобы сбросить другие кнопки
+            AppConfigItem appConfigItem = appConfigItemList.get(position);
+
+            listeners.onClickListener(v, appConfigItem, selectedPosition);
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return appConfigItemList.size();
+    }
+
+    /// Вложенный класс — с какими элементами в дизайне мы будем работать, текстовыми полями, картинками и т.д
+    public static final class EditorViewHolder extends RecyclerView.ViewHolder {
+
+        MaterialButton toggleButton;
+        public EditorViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            toggleButton = itemView.findViewById(R.id.button_thirdFragmentInputItem);
+        }
+    }
+}
